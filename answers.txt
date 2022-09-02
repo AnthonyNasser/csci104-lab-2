@@ -1,0 +1,12 @@
+Answers go here!
+
+1.
+invaders[invaderRow][invaderRow] = new Warrior(); 
+on line 249 should be
+invaders[invaderRow][invaderCol] = new Warrior();
+This creates a segfault error because invaders have more columns than rows and so the program will eventually attempt to write
+outside of the appropriately allocated memory space.
+
+2.
+On line 27, there is an obstructing semicolon that prevents the code from running properly. 
+The second if statement on line 32 should be an else if to avoid some edge cases.
